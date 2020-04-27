@@ -67,3 +67,7 @@ class BookingViewSet(viewsets.ModelViewSet):
                 booking.save()
             report_data = self.serializer_class(instance=booking).data
             return response.Response(status=status.HTTP_200_OK, data=report_data)
+
+
+def index(request):
+    return render(request, 'restaurant.html')
